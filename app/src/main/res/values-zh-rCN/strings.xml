@@ -2,4 +2,5 @@
 <resources>
     <string name="tip">你需要下载单独的apk才可以使用 Miku UI 歌词适配器。</string>
     <string name="download">下载</string>
+    <string name="tip_auto_start">Miku UI 歌词适配器将会在安装后自动启动。</string>
 </resources>

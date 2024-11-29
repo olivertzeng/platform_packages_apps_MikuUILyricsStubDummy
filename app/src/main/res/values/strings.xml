@@ -2,4 +2,8 @@
     <string name="app_name" translatable="false">Miku UI Lyrics Dummy Stub</string>
     <string name="tip">You need to download the separate apk to use Miku UI Lyrics Stub.</string>
     <string name="download">Download</string>
+    <string name="tip_auto_start">Miku UI Lyrics Stub will be launched automatically after installation.</string>
+
+    <!-- Special use -->
+    <string name="key_update_from_dummy" translatable="false">update_from_dummy</string>
 </resources>

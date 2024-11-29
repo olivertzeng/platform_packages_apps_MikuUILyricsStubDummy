@@ -2,13 +2,21 @@ package com.miku.lyricsstub
 
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : Activity() {
+    private val sharedPreferences: SharedPreferences? by lazy {
+        PreferenceManager.getDefaultSharedPreferences(this)
+    }
+    private val editor: SharedPreferences.Editor? by lazy { sharedPreferences?.edit() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,6 +31,8 @@ class MainActivity : Activity() {
         val btn = Button(this)
         btn.text = getString(R.string.download)
         btn.setOnClickListener {
+            editor?.putBoolean(getString(R.string.key_update_from_dummy), true)?.commit()
+            Toast.makeText(this, getString(R.string.tip_auto_start), Toast.LENGTH_SHORT).show()
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sourceforge.net/projects/divarelease/files/Miku%20UI%20Lyrics%20Stub"))
             startActivity(intent)
         }
