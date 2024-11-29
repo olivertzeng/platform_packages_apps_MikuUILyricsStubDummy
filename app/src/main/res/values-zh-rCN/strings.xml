@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tip">你需要下载单独的apk才可以使用 Miku UI 歌词适配器。</string>
+    <string name="download">下载</string>
+</resources>

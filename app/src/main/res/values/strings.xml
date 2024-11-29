@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Miku UI Lyrics Dummy Stub</string>
+    <string name="app_name" translatable="false">Miku UI Lyrics Dummy Stub</string>
+    <string name="tip">You need to download the separate apk to use Miku UI Lyrics Stub.</string>
+    <string name="download">Download</string>
 </resources>
