@@ -1,0 +1,30 @@
+//
+// Copyright (C) 2022 Miku UI
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+version_name = "dummy"
+version_code = "1"
+
+android_app {
+    name: "MULS_Dummy",
+    srcs: ["src/main/java/**/*.kt"],
+    resource_dirs: ["src/main/res"],
+    manifest: "src/main/AndroidManifest.xml",
+    sdk_version: "current",
+    certificate: "platform",
+    product_specific: true,
+
+    optimize: {
+        proguard_flags_files: ["proguard-rules.pro"],
+    },
+
+
+    aaptflags: [
+        "--version-name",
+	version_name,
+	"--version-code",
+	version_code,
+    ]
+}
+
